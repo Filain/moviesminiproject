@@ -18,6 +18,7 @@ const Movie:FC<IProps> = ({movie}) => {
             <p>{original_title}</p>
 
 
+
         </div>
     );
 };
