@@ -1,0 +1,2 @@
+const searchServise={}
+export {searchServise}
