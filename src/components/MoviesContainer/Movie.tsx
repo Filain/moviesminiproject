@@ -17,6 +17,7 @@ const Movie:FC<IProps> = ({movie}) => {
             <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={original_title} style={{width:"200px"}}/>
             <p>{original_title}</p>
 
+
         </div>
     );
 };
