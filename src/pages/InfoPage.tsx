@@ -4,6 +4,8 @@ const InfoPage = () => {
     return (
         <div>
             <Info/>
+            <hr/>
+            <div>Faces</div>
         </div>
     );
 };

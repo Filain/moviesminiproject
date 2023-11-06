@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {IData, IMovie} from "../../interfases/movieInterfase";
+import {IMovie} from "../../interfases/movieInterfase";
 import {movieServise} from "../../servises/movieServise";
 import {Movie} from "./Movie";
 import css from './Movies.module.css'

@@ -1,20 +1,25 @@
+import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {IInfo} from "../../interfases/infoMovie";
 import {infoServise} from "../../servises/infoServise";
-import {useSearchParams} from "react-router-dom";
+import {InfoMovieDat} from "./InfoMovieDat";
+import {IInfo} from "../../interfases/infoMovie";
 
 const Info = () => {
-    const [query, setQuery] = useSearchParams();
-    console.log(query.get('id'))
+    const {id}=useParams<string>()
+    const [info, setInfo] = useState<IInfo>(null)
+    useEffect(() => {
+        infoServise.getById((id)).then(({data})=>setInfo(data))
+    }, [id]);
+
+
     
-//     const [info, setInfo] = useState<IInfo>()
-//     useEffect(() => {
-// infoServise.getById(id).then(({data})=>setInfo(data))
-//     }, []);
+
+    console.log(typeof id)
+    console.log(info)
     return (
 
         <div>
-            Info
+            {info && <InfoMovieDat key={id} info={info}/>}
         </div>
     );
 };
