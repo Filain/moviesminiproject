@@ -2,7 +2,8 @@ import {useEffect, useState} from "react";
 import {IMovie} from "../../interfases/movieInterfase";
 import {genresServise} from "../../servises/genresServise";
 import {useParams, useSearchParams} from "react-router-dom";
-import {Movie} from "../MoviesContainer/Movie";
+import {Movies} from "../MoviesContainer/Movies";
+
 
 const GenreLists = () => {
     const [moviesGanre, setMoviesGanre] = useState<IMovie[]>([])
@@ -13,35 +14,15 @@ const GenreLists = () => {
 
     useEffect(() => {
         genresServise.getByIdMovie(page, id).then(({data:{results}})=>setMoviesGanre(results))
-    }, [query.get('page')]);
+    }, [page, id]);
 
     console.log(moviesGanre)
 
-    const prev = () => {
-        setQuery(prev=>{
-            prev.set('page', `${+prev.get('page')-1}`)
-            return prev
-        })
-    };
-
-    const next = () => {
-        setQuery(prev=>{
-            prev.set('page', `${+prev.get('page')+1}`)
-            return prev
-        })
-
-    };
 
     return (
         <div>
-
-            <div>
-
-            </div>
-
-                <div>  <button disabled={page==='1'} onClick={prev}>prev</button>
-                <button disabled={page==='500'} onClick={next}>next</button></div>
-
+            GenreLists
+            <Movies page={page} movies={moviesGanre} setQuery={setQuery}/>
 
         </div>
     );

@@ -9,6 +9,7 @@ const Header = () => {
                 <NavLink to={'/movies'}>Movies</NavLink>
                 <NavLink to={'/genres'}>Genres</NavLink>
                 <NavLink to={'/search'}>Search</NavLink>    
+
             </div>
             <div>Theme <input type={"checkbox"}/> </div>
             <div ><img src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="user" className={css.Image}/></div>

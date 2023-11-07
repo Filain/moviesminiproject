@@ -3,7 +3,7 @@ export interface IGenreList {
 }
 
 export interface IGenres{
-    id:boolean,
+    id:number,
     name:string
 }
 

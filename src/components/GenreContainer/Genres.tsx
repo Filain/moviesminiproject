@@ -11,7 +11,9 @@ const Genres = () => {
     console.log(genres)
     return (
         <div>
-            {genres.map(genre=><Genre genre={genre}/>)}
+            {genres.map(genre=><Genre key={genre.id} genre={genre}/>)}
+
+
         </div>
     );
 };
