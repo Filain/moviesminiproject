@@ -6,6 +6,7 @@ const genre='/genre'
 const list ='/list'
 const search='/search'
 const discover='/discover'
+const keyword='/keyword'
 
 
 const urls = {
@@ -14,7 +15,7 @@ const urls = {
         byId:(id:number)=>`${movie}/${id}`
     },
     genre:`${genre}${movie}${list}`,
-    search:`${search}${movie}`
+    search:`${search}${keyword}`
 }
 
 

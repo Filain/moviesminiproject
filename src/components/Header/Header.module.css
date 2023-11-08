@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+
+
 .Header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    font-size: 25px;
-    background-color: #ef6fd1;
+    font-size: 40px;
+    font-family: 'Alumni Sans Inline One', cursive;
+    background-color: rgba(0, 0, 0, 0.6);
     color: snow;
     height: 50px;
 }
@@ -15,7 +19,7 @@
 }
 
 .Header a[class='active']{
-    color: red;
+    color: #8a0000;
 }
 
 .Image {

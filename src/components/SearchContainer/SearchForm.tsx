@@ -1,7 +1,12 @@
 import {useForm} from "react-hook-form";
 import {searchServise} from "../../servises/searchServise";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {ISearchWord} from "../../interfases/searchInterfase";
+import {useEffect, useState} from "react";
+import {axiosServise, IRes} from "../../servises/axiosServise";
+import {IInfo} from "../../interfases/infoMovie";
+import {urls} from "../../constans/urls";
+import {infoServise} from "../../servises/infoServise";
 
 interface IProps {
 
@@ -13,12 +18,30 @@ const SearchForm = () => {
     const [query, setQuery] = useSearchParams({page: '1'});
     const page = query.get('page');
 
+    const navigate = useNavigate()
+
+
+
     const search = async (query:ISearchWord) => {
 
-        console.log(query)
+
+
         const {data}=await searchServise.getBySearch(query.word, page);
-        console.log(data)
+        console.log('data', data)
+        const ids=data.results.map(movieId=>movieId.id)
+
+        console.log(ids)
+
+
+
+
+
+
+
+        navigate(`${ids}`)
     };
+
+
 
 
 
