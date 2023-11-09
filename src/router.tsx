@@ -16,9 +16,7 @@ const router = createBrowserRouter([
             {path:'genres', element: <GenresPage/>, children:[
                     {path:':id', element:<GenreLists/>}
                 ]},
-            {path: 'search', element: <SearchPage/>,children:[
-                    {path: ':ids',element: <SearchContainer/>}
-                ]},
+            {path: 'search', element: <SearchPage/>}
         ]
     }
 ])

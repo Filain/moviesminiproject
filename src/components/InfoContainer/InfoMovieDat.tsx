@@ -5,13 +5,13 @@ interface IProps {
     info:IInfo
 }
 const InfoMovieDat:FC<IProps> = ({info}) => {
-    const{id,title}=info
+    const{id,title,poster_path}=info
     console.log(title)
     console.log(id)
     return (
         <div>
             <div>{title}</div>
-            <div>{id}</div>
+            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt=""/>
         </div>
     );
 };

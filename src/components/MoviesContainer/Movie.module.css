@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+
 .Movie{
-    border: 1px solid black;
-    width: 200px;
+    width: 220px;
     text-align: center;
-    margin: 5px;
+    margin: 0 25px 0 25px ;
+
+}
+
+img{
+    border-radius: 5px;
+}
+
+.Movie:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: .9s ease;
+}
+
+p {
+    font-family: 'Exo 2', sans-serif;
+    color: #c9563f;
 }

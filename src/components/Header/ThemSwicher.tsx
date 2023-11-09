@@ -22,8 +22,8 @@ const ThemSwicher = () => {
                 color="default"
                 inputProps={{'aria-label': 'controlled'}}
             />}
-            label="Mode"
-            labelPlacement="start"
+            label=""
+            labelPlacement="end"
         />
     );
 };

@@ -15,7 +15,7 @@ const urls = {
         byId:(id:number)=>`${movie}/${id}`
     },
     genre:`${genre}${movie}${list}`,
-    search:`${search}${keyword}`
+    search:`${search}${movie}`
 }
 
 

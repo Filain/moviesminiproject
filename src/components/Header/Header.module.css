@@ -10,6 +10,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     color: snow;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 .Header a{
@@ -25,4 +26,7 @@
 .Image {
     height: 25px;
     border: 1px solid black;
+}
+.theme{
+    margin-right: 10px;
 }

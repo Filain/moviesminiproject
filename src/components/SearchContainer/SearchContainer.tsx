@@ -1,9 +1,16 @@
-import {useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {SetURLSearchParams, useParams} from "react-router-dom";
 
-const SearchContainer = () => {
+import {IMovie} from "../../interfases/movieInterfase";
+import {FC} from "react";
+
+interface IProps{
+    movies: IMovie[],
+    page: string,
+    setQuery: SetURLSearchParams
+}
+const SearchContainer:FC<IProps> = () => {
     const {ids}=useParams();
-    const [searchedMovie, setSearchedMovie] = useState()
+
 
     console.log(ids);
     return (
