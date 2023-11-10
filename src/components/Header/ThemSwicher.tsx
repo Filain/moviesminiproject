@@ -1,18 +1,22 @@
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 
 
 const ThemSwicher = () => {
-    const [checking, setChecking] = useState(false);
+    let saveLocal =JSON.parse(localStorage.getItem('theme')) || false
+    const [checking, setChecking] = useState(saveLocal);
+
+    if (!checking) {
+        document.body.classList.add('dark-theme');
+    } else {
+        document.body.classList.remove('dark-theme');
+    }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setChecking(event.target.checked);
-        if (!checking) {
-            document.body.classList.add('dark-theme');
-        } else {
-            document.body.classList.remove('dark-theme');
-        }
+        localStorage.setItem('theme', JSON.stringify(event.target.checked))
+        console.log(event)
     };
     return (
         <FormControlLabel
