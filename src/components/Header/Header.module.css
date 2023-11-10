@@ -11,6 +11,8 @@
     color: snow;
     height: 50px;
     margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .Header a{
@@ -26,7 +28,7 @@
 .Image {
     height: 25px;
     border: 1px solid black;
-}
+    }
 .theme{
     margin-right: 10px;
 }

@@ -27,10 +27,12 @@ const Movies:FC<IProps> = ({movies,setQuery,page}) => {
 
     return (
         <div>
-            <div className={css.Wrap}>{movies.map(movie=><Movie key={movie.id} movie={movie}/>)}</div>
-            <div>
-                <button disabled={page==='1'} onClick={prev}>prev</button>
-                <button disabled={page==='500'} onClick={next}>next</button></div>
+            <div className={css.Wrap}>{movies.map(movie=><Movie key={movie.id} movie={movie}/>)}
+            </div>
+            <div className={css.Movies_button_div}>
+                <button className={css.Movies_button} disabled={page==='1'} onClick={prev}>prev</button>
+                <button className={css.Movies_button} disabled={page==='500'} onClick={next}>next</button>
+            </div>
         </div>
     );
 };

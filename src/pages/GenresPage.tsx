@@ -5,7 +5,7 @@ const GenresPage = () => {
     return (
         <div>
             <Genres/>
-            <hr/>
+
             <Outlet/>
         </div>
     );

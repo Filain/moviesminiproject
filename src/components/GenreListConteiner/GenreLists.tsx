@@ -4,6 +4,8 @@ import {genresServise} from "../../servises/genresServise";
 import {useParams, useSearchParams} from "react-router-dom";
 import {Movies} from "../MoviesContainer/Movies";
 
+import css from './GenreLists.module.css'
+
 
 const GenreLists = () => {
     const [moviesGanre, setMoviesGanre] = useState<IMovie[]>([])
@@ -21,9 +23,7 @@ const GenreLists = () => {
 
     return (
         <div>
-            GenreLists
-            <Movies page={page} movies={moviesGanre} setQuery={setQuery}/>
-
+            <Movies  page={page} movies={moviesGanre} setQuery={setQuery}/>
         </div>
     );
 };
