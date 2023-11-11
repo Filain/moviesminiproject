@@ -11,12 +11,6 @@ const Info = () => {
     useEffect(() => {
         infoServise.getById((id)).then(({data})=>setInfo(data))
     }, [id]);
-
-
-    
-
-    console.log(typeof id)
-    console.log(info)
     return (
 
         <div>

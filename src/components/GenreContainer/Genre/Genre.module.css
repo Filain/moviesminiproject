@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 .genre_button{
-    /*width: 300px;*/
+
     font-family: 'Oswald', sans-serif;
     display: inline-block;
     box-sizing: border-box;
@@ -23,6 +23,7 @@
     touch-action: manipulation;
     z-index: 1;
     text-decoration: none;
+    text-align: center;
 }
 
 .genre_button:hover{

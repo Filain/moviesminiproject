@@ -11,8 +11,6 @@ interface IProps {
 
 const InfoMovieDat: FC<IProps> = ({info}) => {
     const {id, title, poster_path, overview, genres, release_date, vote_average, original_title, runtime,} = info
-    console.log(title)
-    console.log(id)
     return (
         <div className={css.wrap}>
             <div className={css.title}>{title}</div>
@@ -25,7 +23,7 @@ const InfoMovieDat: FC<IProps> = ({info}) => {
             <p>overview</p>
             <div className={css.text}>{overview}</div>
             <p>genres</p>
-            <div className={css.text}>{genres.map((genre, index) => <NavLink to={`/genres/${genre.id}`} className={css.link}> {genre.name}  </NavLink>)}</div>
+            <div className={css.text}>{genres.map((genre, index) => <NavLink to={`/genres/${genre.id}`} className={css.link} key={genre.id}> {genre.name}  </NavLink>)}</div>
             {/*<div className={css.text}>{genres.map((genre, index) => <span key={genre.id}> </span>)}</div>*/}
             <p>runtime</p>
             <div className={css.text}>{runtime} min</div>

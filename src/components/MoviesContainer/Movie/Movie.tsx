@@ -24,7 +24,7 @@ const Movie:FC<IProps> = ({movie}) => {
         <div className={css.Movie} onClick={nav}>
             <div> {poster_path ?
                 <img className={css.img_poster} src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={original_title} style={{width:'150'}} /> :
-                <img src={'https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png'} alt="not found" style={{width:'150'}}/>
+                <img className={css.img_poster}  src={'https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png'} alt="not found" style={{width:'150'}}/>
             }
             </div>
 

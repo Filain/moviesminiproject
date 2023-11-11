@@ -8,6 +8,7 @@ import css from './Genres.module.css'
 
 const Genres = () => {
     const [genres, setGenres] = useState<IGenres[]>([])
+    // console.log(genres);
     useEffect(() => {
         genresServise.getAll().then(({data})=>setGenres(data.genres))
     }, []);
