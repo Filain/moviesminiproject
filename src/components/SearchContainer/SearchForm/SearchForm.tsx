@@ -1,21 +1,20 @@
 import {useForm} from "react-hook-form";
-import {ISearchWord} from "../../interfases/searchInterfase";
-import {FC} from "react";
+import {useState} from "react";
+
+import {ISearchWord} from "../../../interfases";
+import {SearchContainer} from "../SearchContainer";
+
 import css from "./SearchForm.module.css";
 
-interface IProps {
-    setWord:(setWord:string)=>void
-}
 
-const SearchForm:FC<IProps> = ({setWord}) => {
+
+const SearchForm = () => {
     const {handleSubmit, reset, register} = useForm()
-    // const navigate = useNavigate()
-
+    const [word, setWord] = useState<string>(null)
 
     const search = (query: ISearchWord) => {
         setWord(query.word)
         reset()
-        // navigate(`${query.word}`)
     };
 
     return (
@@ -24,7 +23,7 @@ const SearchForm:FC<IProps> = ({setWord}) => {
                 <input className={css.input} type="text" placeholder={'Movie'} {...register('word')}/>
                 <button className={css.button}>Search</button>
             </form>
-
+            <SearchContainer word={word}/>
         </div>
     );
 };

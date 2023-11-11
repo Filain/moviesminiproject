@@ -1,9 +1,9 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MainLayout} from "./layout/MainLayout";
+import {MainLayout} from "./layout";
 import {GenresPage, MoviesPage, SearchPage} from "./pages";
-import {InfoPage} from "./pages/InfoPage";
-import {GenreLists} from "./components/GenreListConteiner/GenreLists";
-import {SearchContainer} from "./components/SearchContainer/SearchContainer";
+import {InfoPage} from "./pages";
+import {GenreLists} from "./components";
+
 
 
 const router = createBrowserRouter([

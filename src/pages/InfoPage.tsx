@@ -1,4 +1,4 @@
-import {Info} from "../components/InfoContainer/Info";
+import {Info} from "../components";
 
 const InfoPage = () => {
     return (

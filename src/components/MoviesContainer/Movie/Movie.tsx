@@ -1,11 +1,11 @@
-
 import {FC} from "react";
-import {IMovie} from "../../interfases/movieInterfase";
-
-import css from './Movie.module.css'
 import {useNavigate} from "react-router-dom";
+
 import {Rating} from "@mui/material";
 
+import {IMovie} from "../../../interfases";
+
+import css from './Movie.module.css'
 interface IProps {
     movie: IMovie
 }
@@ -30,7 +30,7 @@ const Movie:FC<IProps> = ({movie}) => {
 
 
             <Rating className={css.Rating} name="customized-10" defaultValue={vote_average} precision={0.1} max={10} size="small" readOnly />
-            <p>{original_title}</p>
+            <p className={css.title}>{original_title}</p>
 
 
         </div>

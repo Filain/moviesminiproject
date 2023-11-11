@@ -1,8 +1,9 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {infoServise} from "../../servises/infoServise";
-import {InfoMovieDat} from "./InfoMovieDat";
-import {IInfo} from "../../interfases/infoMovie";
+
+import {infoServise} from "../../../servises";
+import {InfoMovieDat} from "../InfoMovieDat";
+import {IInfo} from "../../../interfases";
 
 const Info = () => {
     const {id}=useParams<string>()

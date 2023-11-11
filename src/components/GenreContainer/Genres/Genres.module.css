@@ -1,5 +1,4 @@
 .genres_wrap{
     display: flex;
-    /*flex-wrap: wrap;*/
     min-width: 1100px;
 }

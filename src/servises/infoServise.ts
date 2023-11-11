@@ -1,7 +1,7 @@
 import {axiosServise, IRes} from "./axiosServise";
 
-import {IInfo} from "../interfases/infoMovie";
-import {urls} from "../constans/urls";
+import {IInfo} from "../interfases";
+import {urls} from "../constans";
 
 const infoServise={
     getById:(id:string):IRes<IInfo> => axiosServise.get(urls.info.byId(+id))

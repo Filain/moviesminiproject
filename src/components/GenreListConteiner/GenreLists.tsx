@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
-import {IMovie} from "../../interfases/movieInterfase";
-import {genresServise} from "../../servises/genresServise";
 import {useParams, useSearchParams} from "react-router-dom";
+
+import {IMovie} from "../../interfases";
+import {genresServise} from "../../servises";
 import {Movies} from "../MoviesContainer/Movies";
 
-import css from './GenreLists.module.css'
+
 
 
 const GenreLists = () => {

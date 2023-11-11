@@ -1,5 +1,5 @@
 import axios, {AxiosResponse} from "axios";
-import {baseURL, token} from "../constans/urls";
+import {baseURL, token} from "../constans";
 
 export type IRes<T> = Promise<AxiosResponse<T>>
 

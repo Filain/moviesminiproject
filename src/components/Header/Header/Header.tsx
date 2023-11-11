@@ -1,7 +1,8 @@
-import css from './Header.module.css'
 import {NavLink} from "react-router-dom";
-import {ThemSwicher} from "./ThemSwicher";
 
+import {ThemSwicher} from "../ThemSwicher";
+
+import css from './Header.module.css'
 const Header = () => {
     return (
         <div className={css.Header}>

@@ -1,8 +1,9 @@
-import {Movies} from "../components/MoviesContainer/Movies";
 import {useEffect, useState} from "react";
-import {IMovie} from "../interfases/movieInterfase";
 import {useSearchParams} from "react-router-dom";
-import {movieServise} from "../servises/movieServise";
+
+import {movieServise} from "../servises";
+import {Movies} from "../components/MoviesContainer/Movies";
+import {IMovie} from "../interfases";
 
 
 const MoviesPage = () => {

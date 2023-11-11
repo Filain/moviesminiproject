@@ -1,7 +1,6 @@
 import {axiosServise, IRes} from "./axiosServise";
-import {IGenreList} from "../interfases/genresInterfase";
-import {urls} from "../constans/urls";
-import {IData} from "../interfases/movieInterfase";
+import {urls} from "../constans";
+import {IData, IGenreList} from "../interfases";
 
 const genresServise={
     getAll:():IRes<IGenreList>=>axiosServise.get(urls.genre),

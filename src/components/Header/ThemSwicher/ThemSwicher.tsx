@@ -1,6 +1,8 @@
+import {ChangeEvent, useState} from "react";
+
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {ChangeEvent, useEffect, useState} from "react";
+
 
 
 const ThemSwicher = () => {

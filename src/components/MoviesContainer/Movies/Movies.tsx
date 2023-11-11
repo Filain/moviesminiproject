@@ -1,8 +1,12 @@
 import {FC} from "react";
-import {IMovie} from "../../interfases/movieInterfase";
-import {Movie} from "./Movie";
-import css from './Movies.module.css'
 import {SetURLSearchParams} from "react-router-dom";
+
+
+import {IMovie} from "../../../interfases";
+import {Movie} from "../Movie";
+
+import css from './Movies.module.css'
+
 
 interface IProps{
     movies: IMovie[],
@@ -31,6 +35,7 @@ const Movies:FC<IProps> = ({movies,setQuery,page}) => {
             </div>
             <div className={css.Movies_button_div}>
                 <button className={css.Movies_button} disabled={page==='1'} onClick={prev}>prev</button>
+                <div className={css.Movies_page_number}>{page}</div>
                 <button className={css.Movies_button} disabled={page==='500'} onClick={next}>next</button>
             </div>
         </div>
